@@ -1,11 +1,31 @@
 
 
-
 body{
     background-color: bisque;
     margin: auto;
+    font-family: Roboto, sans-serif;
 }
 
 h1{
     text-align: center;
+    font: 5rem;
 }
+
+h2{
+    text-align: center;
+    font: 2rem;
+}
+h3{
+    text-align: center;
+    font: 1.5rem;
+}
+h4{
+    text-align: center;
+    font: 1.5rem;
+}
+
+.foto{
+    display: flex;
+    justify-content: center;
+}
+
