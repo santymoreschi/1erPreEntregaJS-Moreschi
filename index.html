@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="En">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
-    <title>Resumen de compra</title>
+    <title>GAMES MARKET</title>
 </head>
 <body>
 
 <header>
-    <h1>TU PEDIDO ESTA EN ACCIÓN</h1>
-
+    <div class="logo">
+        <img src="img/games market.jpg" alt="logo de la companía" width="150px" height="150px">
+    </div>
+    <h1>Productos GAMES MARKET</h1>
+    <input type="text" id="searchInput" placeholder="Buscar productos...">
+    <button onclick="filterProducts()">Buscar</button>
 </header>
 
-    <h2>"Gracias por realizar tu compra. ¡Valoramos tu apoyo y confianza en nuestros productos/servicios!"</h2>
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="./pages/productos.html">Productos</a></li>
+        <li><a href="./pages/acerca.html">Acerca de</a></li>
+        <li><a href="./pages/contacto.html">Contacto</a></li>
+    </ul>
+</nav>
 
-    <div class="foto">
-    <img src="https://img.freepik.com/vector-premium/pedido-cerrado-ilustracion-vector-plano-icono-estado-procesamiento-pedidos-compras-moviles-hombre-pie-junto-gran-telefono-inteligente-carrito-compras-pantalla-compras-digitales-pedido-enviado-cerrado_241107-1213.jpg?w=996" alt="Gracias por tu compra" width="600px" height="600px">
-</div>
-
-    <h3>Estamos procesando tu pedido para que lo retires en nuestro local</h3>
-
-    <h4>En unos minutos recibirás tu ticket en tu mail</h4>
+<main>
+    <div id="productList">
+        <!-- Aquí se mostrarán los productos -->
+    </div>
+</main>
 
 
-
-
-
-    <footer>
-    
-    </footer>
 
 
 <script src="./js/ticket.js"></script>
