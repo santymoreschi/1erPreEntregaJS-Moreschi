@@ -1,13 +1,26 @@
-/*
+
 
 //Saludo
 function saludar() {
-    alert("Gracias por realizar tu compra");
-    alert("A continuación te pediremos que ingreses los productos que compraste");
+    alert("Bienvenido a Games Market");
+    alert("A continuación te pediremos que ingreses algunos datos para poder darte una experiencia grandiosa");
+    alert("Recuerda que toda esta informacion es 100% confidencial y con objetivos de brindar la mejor asistencia para su comodidad");
+    alert("Recuerda tambien tomar nota de las compras que incluyas en el carrito para que puedas asegurar los gastos que estas por realizar");
 }
 saludar();
 
+//¿Eres mayor de edad?
+let edad = 20;
 
+if (edad >= 18) {
+console.log("Eres mayor de edad");
+} else {
+console.log("Eres menor de edad");
+} 
+
+
+
+/*
 //Acumulador de productos
 let resultado = 0;
 let ticket = "Detalle de la Compra:";
@@ -31,16 +44,6 @@ alert(ticket + "\nTotal: $" + resultado.toFixed(2));
 
 
 
-//¿Eres mayor de edad?
-let edad = 20;
-
-if (edad >= 18) {
-console.log("Eres mayor de edad");
-} else {
-console.log("Eres menor de edad");
-} 
-*/
-
 /*
 //length
 const listanumerica = (10, "hola", true, 44, -10, 20, 30, 40, 50, "ho", "la");
@@ -63,12 +66,6 @@ function calcularArea() {
     document.getElementById('resultado').innerText = `El área del círculo es: ${area.toFixed(2)}`;
 }
 
-// Saludo
-function saludar() {
-    alert("Gracias por realizar tu compra");
-    alert("A continuación te pediremos que ingreses los productos que compraste");
-}
-saludar();
 
 // Acumulador de productos
 let resultado = 0;
@@ -89,19 +86,11 @@ do {
 } while (rta !== "SI");
 document.write(ticket + "<br>Total: $" + resultado.toFixed(2));
 
-// ¿Eres mayor de edad?
-let edad = 20;
-
-if (edad >= 18) {
-    console.log("Eres mayor de edad");
-} else {
-    console.log("Eres menor de edad");
-}
 */
 
 
 
-// Datos de los productos disponibles en la tienda
+// Datos de los productos disponibles en la tienda del index
 const products = [
     { id: 1, name: 'Smartphone', category: 'Electrónicos', price: 300, image: 'img/smartphone.jpg' },
     { id: 2, name: 'Smart TV', category: 'Electrónicos', price: 800, image: 'img/smart.jpg' },
