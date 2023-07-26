@@ -1,5 +1,4 @@
 
-
 //Saludo
 function saludar() {
     alert("Bienvenido a Games Market");
@@ -17,76 +16,6 @@ console.log("Eres mayor de edad");
 } else {
 console.log("Eres menor de edad");
 } 
-
-
-
-/*
-//Acumulador de productos
-let resultado = 0;
-let ticket = "Detalle de la Compra:";
-let rta = "";
-
-do {
-let producto = prompt("ingrese el nombre del producto:");
-let precio = Number(prompt("ingrese el valor del producto: "))
-
-
-if (producto && precio && !isNaN(precio)) {
-resultado += precio;
-ticket += "\n" + producto + "\t$" + precio.toFixed(2);
-rta = prompt("¿Desea salir? (Ingrese 'SI' para salir.)").toUpperCase();
-} else {
-alert("Ingrese valores válidos para el nombre y el precio del producto.");
-}
-} while (rta !== "SI");
-alert(ticket + "\nTotal: $" + resultado.toFixed(2));
-
-
-
-
-/*
-//length
-const listanumerica = (10, "hola", true, 44, -10, 20, 30, 40, 50, "ho", "la");
-
-for (let i = 0; i < listanumerica.length; i++) {
-    console.log(listanumerica[i])
-}
-
-
-
-function calcularArea() {
-    const radio = parseFloat(document.getElementById('radio').value);
-
-    if (isNaN(radio)) {
-        document.getElementById('resultado').innerText = "Ingresa un número válido.";
-        return;
-    }
-
-    const area = Math.PI * Math.pow(radio, 2);
-    document.getElementById('resultado').innerText = `El área del círculo es: ${area.toFixed(2)}`;
-}
-
-
-// Acumulador de productos
-let resultado = 0;
-let ticket = "Detalle de la Compra:";
-let rta = "";
-
-do {
-    let producto = prompt("Ingrese el nombre del producto:");
-    let precio = parseFloat(prompt("Ingrese el valor del producto: "));
-
-    if (producto && !isNaN(precio)) {
-        resultado += precio;
-        ticket += "\n" + producto + "\t$" + precio.toFixed(2);
-        rta = prompt("¿Desea salir? (Ingrese 'SI' para salir.)").toUpperCase();
-    } else {
-        alert("Ingrese valores válidos para el nombre y el precio del producto.");
-    }
-} while (rta !== "SI");
-document.write(ticket + "<br>Total: $" + resultado.toFixed(2));
-
-*/
 
 
 
@@ -126,13 +55,57 @@ function showProducts() {
 function filterProducts() {
     const searchInput = document.getElementById('searchInput');
     const searchTerm = searchInput.value.trim().toLowerCase();
-
-    filteredProducts = products.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm)
+    const foundProduct = products.find((product) =>
+        product.name.toLowerCase() === searchTerm
     );
+    // Si se encuentra un producto, lo muestro en la lista filtrada
+    if (foundProduct) {
+        filteredProducts = [foundProduct];
+    } else {
+        filteredProducts = products.slice();
+    }
 
     showProducts();
 }
-
 // Mostrar los productos al cargar la página
 showProducts();
+
+
+
+
+/*
+//Acumulador de productos
+let resultado = 0;
+let ticket = "Detalle de la Compra:";
+let rta = "";
+
+do {
+let producto = prompt("ingrese el nombre del producto:");
+let precio = Number(prompt("ingrese el valor del producto: "))
+
+
+if (producto && precio && !isNaN(precio)) {
+resultado += precio;
+ticket += "\n" + producto + "\t$" + precio.toFixed(2);
+rta = prompt("¿Desea salir? (Ingrese 'SI' para salir.)").toUpperCase();
+} else {
+alert("Ingrese valores válidos para el nombre y el precio del producto.");
+}
+} while (rta !== "SI");
+alert(ticket + "\nTotal: $" + resultado.toFixed(2));
+
+
+
+
+function calcularArea() {
+    const radio = parseFloat(document.getElementById('radio').value);
+
+    if (isNaN(radio)) {
+        document.getElementById('resultado').innerText = "Ingresa un número válido.";
+        return;
+    }
+
+    const area = Math.PI * Math.pow(radio, 2);
+    document.getElementById('resultado').innerText = `El área del círculo es: ${area.toFixed(2)}`;
+}
+*/
