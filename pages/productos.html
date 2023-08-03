@@ -10,29 +10,48 @@
 
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="../img/games market.jpg" alt="logo de la companía" width="150px" height="150px">
-        </div>
-        <h1>Productos GAMES MARKET</h1>
+<!--encabezado-->
+<header>
+    <h1>GAMES MARKET</h1>
+    <div class="logo">
+        <img src="../img/games market.jpg" alt="logo de la companía" width="150" height="150">
+    </div>
+    <div class="search-box">
         <input type="text" id="searchInput" placeholder="Buscar productos...">
         <button onclick="filterProducts()">Buscar</button>
-    </header>
+    </div>
+</header>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+
+<!--menu de navegacion-->
+<nav class="navbar">
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+
+
 
     <main>
         <div id="productList">
             <!-- Aquí se mostrarán los productos -->
         </div>
     </main>
+
+    <div class="center-container">
+        <div class="product-container" id="productList">
+            <!-- Los productos se mostrarán aquí -->
+        </div>
+    </div>
 
 <footer class="footer">
     <div class="container">
@@ -58,6 +77,6 @@
 </footer>
 
 
-<!-- <script src="../js/ticket.js"></script>-->
-    </body>
-    </html>
+<script src="../js/productos.js"></script>
+</body>
+</html>

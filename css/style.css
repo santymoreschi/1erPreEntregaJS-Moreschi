@@ -6,33 +6,131 @@ body {
     position: relative;
 }
 
-header {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    overflow: hidden;
+/* Animación de desvanecimiento */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* Animación de deslizamiento */
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.logo {
-    float: left;
-    margin-right: 20px;
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
 }
+
+h1 {
+    flex: 1;
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .logo img {
-    height: 100px;
-}
-header h1 {
-    margin: 0;
-    font-size: 32px;
+    width: 150px;
+    height: 150px;
+    animation: fade-in 1.5s ease;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 h2{
+    font-size: 24px;
     text-align: center;
-}
-h3{
-    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
+
+h3 {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.sub-texto{
+    font-size: 18px;
+        /* Tamaño de fuente */
+        color: #333;
+        /* Color de texto */
+        line-height: 1.5;
+        /* Espaciado entre líneas */
+        margin-bottom: 20px;
+}
+
+
+/* Estilos para el div "subtitle-wrapper" */
+.subtitle-wrapper {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #CCCCCC;
+    border: 1px solid ;
+    border-radius: 4px;
+}
+.subtitle-wrapper p {
+    margin: 15px 0;
+}
+
+/* Estilos para index "visitanos" */
+.visitanos {
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el enlace de WhatsApp */
+.whatsapp-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+    background-color: #25d366;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.whatsapp-link i {
+    margin-right: 8px;
+}
+
+/* Estilos generales para la barra de navegación */
 .navbar {
     background-color: #333;
     color: #fff;
@@ -42,13 +140,15 @@ h3{
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    margin: auto;
+    list-style: none;
+    margin-left: auto;
 }
+
 .nav-links li {
-    margin-left: 20px;
+    padding: 0 15px;
 }
+
 .nav-links a {
     color: #fff;
     text-decoration: none;
@@ -58,10 +158,147 @@ h3{
     border-bottom: 2px solid #fff;
 }
 
-
-main {
-    padding: 20px;
+/* Estilos para el menú hamburguesa (responsive) */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
 }
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+
+
+/* modificación del  slider*/
+#carouselExampleIndicators {
+    margin: 30px auto;
+    width: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent;
+    border: 1px solid #444;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators li {
+    background-color: #444;
+    border: none;
+    box-shadow: none;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+
+/* Estilos para la sección */
+#flex-content {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 50px;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 1fr);
+}
+#flex-content a:hover img {
+    transition: transform 0.5s ease;
+    transform: scale(1.15);
+}
+
+
+
+
+
+
+
+/* Estilos para los enlaces de productos (REVISAR) */
+.product-link {
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-link img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-link:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.product-link:hover {
+    transform: scale(1.1);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Animación de zoom al pasar el mouse */
+.product-image:hover {
+    transform: scale(1.1);
+}
+
+/* Otros estilos para la sección */
+#flex-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#flex-content a {
+    text-decoration: none;
+    color: #333;
+}
+/* Estilos para los enlaces de productos (REVISAR) */
+
+
+
+
+
+
+
+
 
 
 /*productos de js*/
@@ -119,14 +356,14 @@ button:hover {
 }
 
 
-
+/*footer*/
 .footer {
     background-color: #333;
     color: #fff;
     padding: 30px 0;
-    text-align: center;
+    text-align: center;;
 }
-/* Estilo del contenedor */
+/* Estilo del contenedor del footer */
 .footer .container {
     display: flex;
     justify-content: center;
@@ -205,29 +442,125 @@ input[type="submit"]:hover {
     background-color: #444;
 }
 
-/*estilos para la páina de carrito*/
-.foto{
+/* Estilos para los títulos */
+h2 {
+    color: #007bff;
     text-align: center;
 }
 
-h4{
+h3 {
     text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+h4, h5 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Estilos para la imagen */
+.foto {
+    display: flex;
+    justify-content: center;
+}
+
+.foto img {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media screen and (max-width: 600px) {
     
+    header {
+        flex-direction: column;
+    }
+    
+    .logo img {
+    margin-right: 0;
+    margin-bottom: 10px;
+    }
+    
+    #searchInput {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    }
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+    }
+    
+    .nav-links li {
+        padding: 15px;
+    }
+    
+    .nav-links a {
+        color: #fff;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
 }
-h5{
-    text-align: center;
-    margin: 5%;
-}
-.text{
-    color: white;
-}
-
-
-
 
 @media screen and (max-width: 768px) {
     .product-card {
-        width: calc(50% - 20px);
+    width: calc(50% - 20px);
+    }
+
+.nav-links {
+    display: none;
+    /* Ocultamos los enlaces en pantallas pequeñas */
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    }
+
+    .nav-links li {
+    padding: 15px;
+    text-align: center;
+    }
+    .menu-icon {
+    display: block;
+    /* Mostramos el icono en pantallas pequeñas */
+    }
+    /* Cambiamos la apariencia del icono al hacer clic */
+    .menu-icon.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+    }
+    .menu-icon.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+    }
+    /* Mostramos los enlaces cuando el menú está activo */
+    .nav-links.active {
+    display: flex;
     }
 }
 
@@ -235,4 +568,5 @@ h5{
     .product-card {
         width: 100%;
     }
+
 }

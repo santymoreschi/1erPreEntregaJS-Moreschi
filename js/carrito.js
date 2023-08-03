@@ -1,3 +1,9 @@
+//menu responsive
+document.querySelector('.menu-icon').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+
+
 //Saludo
 function saludar() {
     alert("Sección de carrito");
