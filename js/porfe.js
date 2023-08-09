@@ -3,20 +3,10 @@
 
 
 
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 
   // Menú desplegable
 document.addEventListener('DOMContentLoaded'), () => {
@@ -190,7 +180,7 @@ function showCartPopup() {
     showCart();
     }
 
-
+*/
 
 
 
@@ -496,3 +486,155 @@ function calcularArea() {
     const area = Math.PI * Math.pow(radio, 2);
     document.getElementById('resultado').innerText = `El área del círculo es: ${area.toFixed(2)}`;
 } */
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+/*
+//clase de productos
+class producto{
+    constructor(id, nombre, precio, cantidad) {
+        this.nombre = nombre
+        this.id = id
+        this.precio
+        this.cantidad = cantidad
+    }
+    descripcion(){
+        return "id" + this.id+
+                "nombre" + this.nombre+
+                "\nprecio" + this.precio+
+                "\ncantidad" + this.cantidad
+    }
+    descripcionDeCompra() {
+        return "id" + this.id+
+                "\nnombre" + this.nombre+
+                "\nprecio" + this.precio+
+                "\ncantidad" + this.cantidad
+    }
+
+    aumentarCantidad(cantidad){
+        this.cantidad = cantidad
+    }
+}
+
+class ProductoController{
+    constructor() {
+        this.listadeproductos = []
+    }
+    ingresar(producto) {
+        this.listadeproductos.push(producto)
+    }
+
+    buscardorProductoPorID(id) {
+        return this.listadeproductos.find(producto => producto.id == id)
+    }
+
+    exhibirproducto() {
+        let contenedor_productos = document. getElementById("contenedor_productos")
+        this.listaProductos.forEach(producto => {
+            contenedor_productos.innerHTML += <div class="card" style="width: 18 rem;">
+            <img src "${producto.img}" class= "card-img-top" alt="imagen"
+            <div class="card-body">
+                <h5 class="card-tittle">${producto.nombre}</h5>
+                <p class="card-text">${producto.precio}</p>
+            </div>
+    </div>
+
+})
+
+class carrito{
+    constructor(){
+    this.listaCarrito = []
+    }
+    ingresar(producto) {
+        this.listaCarrito.push(producto)
+    }
+
+    //45minutos
+    exhibirproducto() {
+        let listaEnTexto = ""
+        this.listaCarrito.forEach(producto => {
+            listaEnTexto = listaEnTexto + producto.descripcionDeCompra()
+            //console.log(producto.descripcionDeCompra())
+        })
+        alert(listaEnTexto)
+    }
+
+    calcularTotal(){
+        return this,listaCarrito.reduce((acumulador,producto) => acumulador + producto.precio + producto.cantidad , 0)
+    }
+
+    calcularIva(){
+        return this.calcularTotal() * 0.25
+    }
+}
+
+
+const CP = new ProductoController()
+const carrito = new carrito()
+carrito.levantarStorage()
+carrito.mostrarProducto()
+
+
+
+CP.ingresar(new producto(1,"producto1", 250, 0))
+CP.ingresar(new producto(2, "producto1", 250, 0))
+CP.ingresar(new producto(3, "producto1", 250, 0))
+CP.ingresar(new producto(4, "producto1", 250, 0))
+CP.ingresar(new producto(5,"producto1", 250, 0))
+
+
+
+do {
+    CP.exhibirproducto()
+    let opcion = Number(prompt("ingrese el código del producto que desea agreagr"))
+    let producto = CP.buscardorProductoPorID(opcion)
+    let cantidad = Number(prompt("Ingrese la cantidad del producto seleccionado que desea"))
+    producto.aumentarCantidad(cantidad)
+    carrito.ingresar(producto,cantidad)
+    console.log("El artículo se añadó correctamente: ")
+    carrito.exhibirproducto()
+
+
+    rta = prompt("ingrese 'ESC' para salir").toUpperCase()
+}while(rta != "ESC")
+
+console.log("El resultado total de su compra es de: "+ carrito.calcularTotal())
+console.log("El resultado total de su compra es de:"+ carrito.calcularIva())
+
+
+
+
+
+CP.exhibirproducto()*/
+
+
+
+
+
+/*
+const carrito = []
+const listadeproductos = []
+
+// Datos de listaproductos
+const products = [
+    { id: 1, name: 'Smartphone', category: 'Electrónicos', price: 300, image: '../img/smartphone.jpg' },
+    { id: 2, name: 'Smart TV', category: 'Electrónicos', price: 800, image: '../img/smart.jpg' },
+    { id: 3, name: 'Laptop', category: 'Electrónicos', price: 1200, image: '../img/laptop.jpg' },
+    { id: 4, name: 'Tablet', category: 'Electrónicos', price: 250, image: '../img/tablet.jpg' },
+    { id: 5, name: 'Auriculares', category: 'Electrónicos', price: 250, image: '../img/auriculares.jpg' },
+    { id: 6, name: 'Smart tv samsung', category: 'Electrónicos', price: 750, image: '../img/smartsamsung.jpg' },
+    { id: 7, name: 'Cascos VR ps5', category: 'Electrónicos', price: 1250, image: '../img/vr.jpg' },
+];
+
+carrito.push(listaproductos[0])
+*/

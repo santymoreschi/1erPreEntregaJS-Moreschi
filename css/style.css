@@ -38,6 +38,15 @@ header {
     align-items: center;
 }
 
+.logo img {
+    width: 150px;
+    height: 150px;
+    animation: fade-in 1.5s ease;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Estilos para los títulos */
 h1 {
     flex: 1;
     font-size: 36px;
@@ -48,39 +57,78 @@ h1 {
     letter-spacing: 2px;
 }
 
-.logo img {
-    width: 150px;
-    height: 150px;
-    animation: fade-in 1.5s ease;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
 h2{
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
     padding: 20px;
+    color: #007bff;
 }
-
 
 h3 {
     font-size: 24px;
     text-align: center;
     margin: 20px 0;
+    font-style: italic;
+    margin-top: 10px;
     color: #333;
+}
+
+h4,
+h5 {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .sub-texto{
     font-size: 18px;
-        /* Tamaño de fuente */
-        color: #333;
-        /* Color de texto */
-        line-height: 1.5;
-        /* Espaciado entre líneas */
-        margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
+/* Estilos generales para la barra de navegación */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Estilos para el menú hamburguesa (responsive) */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
 
 /* Estilos para el div "subtitle-wrapper" */
 .subtitle-wrapper {
@@ -125,54 +173,9 @@ h3 {
     max-width: 200px;
     margin: 0 auto;
 }
-
 .whatsapp-link i {
     margin-right: 8px;
 }
-
-/* Estilos generales para la barra de navegación */
-.navbar {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
-}
-
-.nav-links li {
-    padding: 0 15px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-.nav-links a:hover {
-    border-bottom: 2px solid #fff;
-}
-
-/* Estilos para el menú hamburguesa (responsive) */
-.menu-icon {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: 0.4s;
-}
-
 
 
 /* modificación del  slider*/
@@ -180,24 +183,20 @@ h3 {
     margin: 30px auto;
     width: 100%;
 }
-
 .carousel-inner img {
     width: 100%;
     height: auto;
     max-height: 800px;
     object-fit: cover;
 }
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: transparent;
     border: 1px solid #444;
 }
-
 .carousel-indicators {
     bottom: 10px;
 }
-
 .carousel-indicators li {
     background-color: #444;
     border: none;
@@ -206,14 +205,12 @@ h3 {
     height: 12px;
     margin: 0 5px;
 }
-
 .carousel-indicators .active {
     background-color: #fff;
     width: 14px;
     height: 14px;
     border-radius: 50%;
 }
-
 
 /* Estilos para la sección */
 #flex-content {
@@ -229,13 +226,7 @@ h3 {
     transform: scale(1.15);
 }
 
-
-
-
-
-
-
-/* Estilos para los enlaces de productos (REVISAR) */
+/* Estilos para los enlaces de productos */
 .product-link {
     margin: 10px;
     text-decoration: none;
@@ -245,12 +236,10 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
-
 .product-link img {
     max-width: 100%;
     height: auto;
 }
-
 .product-link:hover::after {
     content: "";
     position: absolute;
@@ -262,22 +251,18 @@ h3 {
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
-
 .product-link:hover {
     transform: scale(1.1);
 }
-
 .product-image {
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
-
 /* Animación de zoom al pasar el mouse */
 .product-image:hover {
     transform: scale(1.1);
 }
-
 /* Otros estilos para la sección */
 #flex-content {
     display: flex;
@@ -285,23 +270,13 @@ h3 {
     flex-wrap: wrap;
     gap: 20px;
 }
-
 #flex-content a {
     text-decoration: none;
     color: #333;
 }
-/* Estilos para los enlaces de productos (REVISAR) */
 
 
-
-
-
-
-
-
-
-
-/*productos de js*/
+/*productos.js*/
 .center-container {
     display: flex;
     justify-content: center;
@@ -309,50 +284,57 @@ h3 {
     height: 100vh;
     overflow-x: hidden;
 }
-
 .product-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
     justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
-
 .product-card {
-    width: calc(25% - 20px);
-    margin: 10px;
-    padding: 30px;
+    width: calc(33.33% - 20px);
+    margin: 20px;
+    padding: 15px;
     border: 2px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    text-align: center;
 }
-
 .product-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
-
 .product-card h3 {
     font-size: 18px;
     margin: 10px 0;
 }
-
 .product-card p {
     font-size: 14px;
     margin: 5px 0;
 }
-
 button {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 90%;
 }
 button:hover {
     background-color: #444;
+}
+.added-to-cart {
+    background-color: green;
+    color: white;
+    transition: background-color 0.5s;
 }
 
 
@@ -368,40 +350,35 @@ button:hover {
     display: flex;
     justify-content: center;
 }
-
 .footer .contact-info,
 .footer .social-media {
     flex: 1;
     max-width: 400px;
 }
-
 /* Estilo para los encabezados de las secciones */
 .footer h3 {
     font-size: 20px;
     margin-bottom: 15px;
 }
-
 /* Estilo para los enlaces de redes sociales */
 .footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .footer ul li {
     margin-bottom: 10px;
 }
-
 .footer ul li a {
     color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-
 .footer ul li a i {
     margin-right: 10px;
 }
+
 
 /* Estilos del formulario (contacto) */
 form {
@@ -412,12 +389,10 @@ form {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 label {
     display: block;
     margin-bottom: 5px;
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -428,7 +403,6 @@ textarea {
     border-radius: 3px;
     box-sizing: border-box;
 }
-
 input[type="submit"] {
     background-color: #333;
     color: #fff;
@@ -437,45 +411,23 @@ input[type="submit"] {
     border-radius: 6px;
     cursor: pointer;
 }
-
 input[type="submit"]:hover {
     background-color: #444;
 }
-
-/* Estilos para los títulos */
-h2 {
-    color: #007bff;
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-h4, h5 {
-    text-align: center;
-    margin-top: 20px;
-}
-
 .contact-info {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
-
 .contact-info p {
     text-align: center;
     line-height: 1.6;
 }
-
 /* Estilos para la imagen */
 .foto {
     display: flex;
     justify-content: center;
 }
-
 .foto img {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -513,6 +465,7 @@ h4, h5 {
     
     .nav-links li {
         padding: 15px;
+        text-align: center;
     }
     
     .nav-links a {
@@ -522,33 +475,7 @@ h4, h5 {
     .menu-icon {
         display: block;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .product-card {
-    width: calc(50% - 20px);
-    }
-
-.nav-links {
-    display: none;
-    /* Ocultamos los enlaces en pantallas pequeñas */
-    flex-direction: column;
-    position: absolute;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    }
-
-    .nav-links li {
-    padding: 15px;
-    text-align: center;
-    }
-    .menu-icon {
-    display: block;
-    /* Mostramos el icono en pantallas pequeñas */
-    }
-    /* Cambiamos la apariencia del icono al hacer clic */
+     /* Cambiamos la apariencia del icono al hacer clic */
     .menu-icon.active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -562,11 +489,8 @@ h4, h5 {
     .nav-links.active {
     display: flex;
     }
-}
 
-@media screen and (max-width: 480px) {
     .product-card {
-        width: 100%;
+    width: 100%;
     }
-
 }
