@@ -162,8 +162,6 @@ function showCartPopup() {
 
 
 
-
-
     
     function removeFromCart(event) {
     const productId = parseInt(event.target.getAttribute('data-id'));
@@ -179,6 +177,28 @@ function showCartPopup() {
     }
     showCart();
     }
+
+
+
+
+
+
+
+
+    
+
+
+    function calcularArea() {
+    const radio = parseFloat(document.getElementById('radio').value);
+
+    if (isNaN(radio)) {
+        document.getElementById('resultado').innerText = "Ingresa un número válido.";
+        return;
+    }
+
+    const area = Math.PI * Math.pow(radio, 2);
+    document.getElementById('resultado').innerText = `El área del círculo es: ${area.toFixed(2)}`;
+} 
 
 */
 

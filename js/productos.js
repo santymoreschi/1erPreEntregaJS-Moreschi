@@ -11,14 +11,14 @@ console.log("Eres mayor de edad");
 } else {
 console.log("Eres menor de edad");
 } 
-
+alert("Recuerda que debes ser mayor de edad para comprar estos productos.");
 
 function loadCartFromLocalStorage() {
     const cartItemsString = localStorage.getItem('cartItems');
     if (cartItemsString) {
         cartItems = JSON.parse(cartItemsString);
     }
-    loadCartFromLocalStorage();
+
 }
 
 
@@ -48,7 +48,6 @@ function addToCart(event) {
 
     loadCartFromLocalStorage();
     showProducts();
-    updateCartView();
 }
 
 
@@ -94,7 +93,16 @@ function showProducts() {
     addToCartButtons.forEach((button) => {
         button.addEventListener('click', addToCart);
     });
+
+
+
 }
+
+
+
+
+
+
 
 // Filtrar productos por nombre
 function filterProducts() {
@@ -124,17 +132,4 @@ const navLinks = document.querySelector('.nav-links');
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
-
-
-function calcularArea() {
-    const radio = parseFloat(document.getElementById('radio').value);
-
-    if (isNaN(radio)) {
-        document.getElementById('resultado').innerText = "Ingresa un número válido.";
-        return;
-    }
-
-    const area = Math.PI * Math.pow(radio, 2);
-    document.getElementById('resultado').innerText = `El área del círculo es: ${area.toFixed(2)}`;
-} 
 
