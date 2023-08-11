@@ -13,6 +13,21 @@ console.log("Eres menor de edad");
 alert("Recuerda que debes ser mayor de edad para comprar estos productos.");
 */
 
+
+
+const openModalButtons = document.querySelectorAll('.open-modal-button');
+openModalButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        const productId = parseInt(event.target.getAttribute('data-product-id'));
+        const product = products.find((p) => p.id === productId);
+        if (product) {
+            openModal(product);
+        }
+    });
+});
+
+
+
 const openModalButton = document.getElementById('openModal');
 const closeModalButton = document.getElementById('closeModalBtn');
 const modal = document.getElementById('myModal');
@@ -102,7 +117,7 @@ function showProducts() {
     const openModalButtons = document.querySelectorAll('.open-modal-button');
     openModalButtons.forEach((button) => {
         button.addEventListener('click', () => {
-        openModal(product);
+        openModal(products);
         });
     })
 
@@ -130,7 +145,7 @@ function openModal(product) {
     }
 
 
-//Productos por nombre
+//Buscador de Productos por nombre
 function filterProducts() {
     const searchInput = document.getElementById('searchInput');
     const searchTerm = searchInput.value.trim().toLowerCase();
