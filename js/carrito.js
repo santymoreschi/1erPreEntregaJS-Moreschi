@@ -4,6 +4,8 @@ document.querySelector('.menu-icon').addEventListener('click', () => {
 });
 
 
+
+/*
 //Saludo
 function saludar() {
     alert("Sección de carrito");
@@ -32,7 +34,7 @@ alert(ticket + "\nTotal: $" + resultado.toFixed(2));
 
 
 
-/*//Saludo
+//Saludo
 function saludar() {
 alert("Bienvenido a Games Market");
 alert("A continuación te pediremos que ingreses algunos datos para poder darte una experiencia grandiosa");

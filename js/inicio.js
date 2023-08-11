@@ -1,7 +1,12 @@
+//MENU DESPLEGABLE
 document.querySelector('.menu-icon').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
+
+
+
+/*
 // Función para saludar al cliente y solicitar nombre, edad y localidad
 function saludar() {
 var nombre = prompt("Por favor, ingresa tu nombre:");
@@ -43,4 +48,4 @@ console.log("Eres mayor de edad");
 } else {
 console.log("Eres menor de edad");
 }
-
+*/

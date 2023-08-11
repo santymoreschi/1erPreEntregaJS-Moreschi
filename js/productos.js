@@ -3,7 +3,7 @@ document.querySelector('.menu-icon').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
-//Recuerda que debes ser mayor de edad
+/*
 let edad = 20;
 if (edad >= 18) {
 console.log("Eres mayor de edad");
@@ -11,11 +11,10 @@ console.log("Eres mayor de edad");
 console.log("Eres menor de edad");
 } 
 alert("Recuerda que debes ser mayor de edad para comprar estos productos.");
+*/
 
-
-//añadido recientemente por el modal
 const openModalButton = document.getElementById('openModal');
-const closeModalButton = document.getElementById('closeModal');
+const closeModalButton = document.getElementById('closeModalBtn');
 const modal = document.getElementById('myModal');
 
 openModalButton.addEventListener('click', () => {
@@ -33,24 +32,15 @@ function loadCartFromLocalStorage() {
     }
 }
 
-
-
-//Almacenar los productos en el carrito
+//Productos en el carrito
 let cartItems = [];
-
-// Función para añadir un producto al carrito
 function addToCart(event) {
     const productId = parseInt(event.target.getAttribute('data-product-id'));
     const productToAdd = products.find((product) => product.id === productId);
-
     if (productToAdd) {
         cartItems.push(productToAdd);
         console.log(`Producto "${productToAdd.name}" añadido al carrito.`);
-
-    //Carrito actualizado usando localStorage
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        
-    // Cambiar el color del botón al añadir al carrito
         event.target.classList.add('added-to-cart');
         setTimeout(() => {
             event.target.classList.remove('added-to-cart');
@@ -58,13 +48,12 @@ function addToCart(event) {
     } else {
         console.log("Producto no encontrado.");
     }
-
     loadCartFromLocalStorage();
     showProducts();
 }
 
 
-// Datos de los productos disponibles en la tienda del index
+//Productos disponibles en la tienda del index
 const products = [
     { id: 1, name: 'Smartphone', category: 'Electrónicos', price: 300, image: '../img/smartphone.jpg' },
     { id: 2, name: 'Smart TV', category: 'Electrónicos', price: 800, image: '../img/smart.jpg' },
@@ -77,12 +66,9 @@ const products = [
     { id: 9, name: 'Tablet Samsung Tab A7', category: 'Electrónicos', price: 538, image: 'https://http2.mlstatic.com/D_NQ_NP_639004-MLU69482268920_052023-O.webp' },
     { id: 10, name: 'Mando ps4', category: 'Electrónicos', price: 290, image: 'https://http2.mlstatic.com/D_NQ_NP_686753-MLU69972650035_062023-O.webp' },
 ];
-
-
-// Variable para almacenar los productos filtrados
 let filteredProducts = products.slice();
 
-// Función para mostrar página HTML
+// Función para HTML
 function showProducts() {
     const productListDiv = document.getElementById('productList');
     productListDiv.innerHTML = '';
@@ -90,7 +76,6 @@ function showProducts() {
     filteredProducts.forEach((product) => {
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
-        //añadido recien
         const isProductInCart = cartItems.some((item) => item.id === product.id);
         const addButtonClass = isProductInCart ? 'add-to-cart-button disabled' : 'add-to-cart-button';
 
@@ -100,9 +85,11 @@ function showProducts() {
             <p>Categoría: ${product.category}</p>
             <p>Precio: $${product.price}</p>
             <button class="${addButtonClass}" data-product-id="${product.id}">Añadir al carrito</button>
-            <button class="open-modal-button" data-product-id="${product.id}">Comprar</button>
+            <button id="openModal" class="open-modal-button" data-product-id="${product.id}">Comprar</button>
         
         `;
+        const openModal = document.getElementById('openModal');
+        
         productListDiv.appendChild(productCard);
     });
 
@@ -111,50 +98,45 @@ function showProducts() {
     addToCartButtons.forEach((button) => {
         button.addEventListener('click', addToCart);
     });
-
-    // Agrega evento al botón "Ver Detalles"
-        const openModalButtons = productCard.querySelectorAll('.open-modal-button');
-        openModalButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                openModal(product);
-            });
+    
+    const openModalButtons = document.querySelectorAll('.open-modal-button');
+    openModalButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+        openModal(product);
+        });
     })
 
 }
 
-//funcion para el modal
+//Modal
 function openModal(product) {
-        const modal = document.getElementById('myModal');
-        const modalProductName = document.getElementById('modalProductName');
-        const modalProductImage = document.getElementById('modalProductImage');
-        const modalProductCategory = document.getElementById('modalProductCategory');
-        const modalProductPrice = document.getElementById('modalProductPrice');
+    const modal = document.getElementById('myModal');
+    const modalProductName = document.getElementById('modalProductName');
+    const modalProductImage = document.getElementById('modalProductImage');
+    const modalProductCategory = document.getElementById('modalProductCategory');
+    const modalProductPrice = document.getElementById('modalProductPrice');
 
-        modalProductName.textContent = product.name;
-        modalProductImage.src = product.image;
-        modalProductCategory.textContent = `Categoría: ${product.category}`;
-        modalProductPrice.textContent = `Precio: $${product.price}`;
+    modalProductName.textContent = product.name;
+    modalProductImage.src = product.image;
+    modalProductCategory.textContent = `Categoría: ${product.category}`;
+    modalProductPrice.textContent = `Precio: $${product.price}`;
 
-        modal.style.display = 'block';
+    modal.style.display = 'block';
 
-        const closeModalButton = document.getElementById('closeModal');
-        closeModalButton.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+    const closeModalButton = document.getElementById('closeModal');
+    closeModalButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    S});
     }
 
 
-
-
-
-// Filtrar productos por nombre
+//Productos por nombre
 function filterProducts() {
     const searchInput = document.getElementById('searchInput');
     const searchTerm = searchInput.value.trim().toLowerCase();
     const foundProduct = products.find((product) =>
         product.name.toLowerCase() === searchTerm
     );
-    // Si se encuentra un producto, lo muestro en la lista filtrada
     if (foundProduct) {
         filteredProducts = [foundProduct];
     } else {
@@ -163,9 +145,7 @@ function filterProducts() {
 
     showProducts();
 }
-// Mostrar los productos al cargar la página
 showProducts();
-
 
 
 //funciones para el menu del index
