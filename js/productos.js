@@ -5,7 +5,6 @@ document.querySelector('.menu-icon').addEventListener('click', () => {
 
 //Recuerda que debes ser mayor de edad
 let edad = 20;
-
 if (edad >= 18) {
 console.log("Eres mayor de edad");
 } else {
@@ -13,13 +12,27 @@ console.log("Eres menor de edad");
 } 
 alert("Recuerda que debes ser mayor de edad para comprar estos productos.");
 
+
+//añadido recientemente por el modal
+const openModalButton = document.getElementById('openModal');
+const closeModalButton = document.getElementById('closeModal');
+const modal = document.getElementById('myModal');
+
+openModalButton.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+closeModalButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
 function loadCartFromLocalStorage() {
     const cartItemsString = localStorage.getItem('cartItems');
     if (cartItemsString) {
         cartItems = JSON.parse(cartItemsString);
     }
-
 }
+
 
 
 //Almacenar los productos en el carrito
@@ -77,13 +90,18 @@ function showProducts() {
     filteredProducts.forEach((product) => {
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
+        //añadido recien
+        const isProductInCart = cartItems.some((item) => item.id === product.id);
+        const addButtonClass = isProductInCart ? 'add-to-cart-button disabled' : 'add-to-cart-button';
 
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}" style="height: 150px; object-fit: cover;">
             <h3>${product.name}</h3>
             <p>Categoría: ${product.category}</p>
             <p>Precio: $${product.price}</p>
-            <button class="add-to-cart-button" data-product-id="${product.id}">Añadir al carrito</button>
+            <button class="${addButtonClass}" data-product-id="${product.id}">Añadir al carrito</button>
+            <button class="open-modal-button" data-product-id="${product.id}">Comprar</button>
+        
         `;
         productListDiv.appendChild(productCard);
     });
@@ -94,11 +112,36 @@ function showProducts() {
         button.addEventListener('click', addToCart);
     });
 
-
+    // Agrega evento al botón "Ver Detalles"
+        const openModalButtons = productCard.querySelectorAll('.open-modal-button');
+        openModalButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                openModal(product);
+            });
+    })
 
 }
 
+//funcion para el modal
+function openModal(product) {
+        const modal = document.getElementById('myModal');
+        const modalProductName = document.getElementById('modalProductName');
+        const modalProductImage = document.getElementById('modalProductImage');
+        const modalProductCategory = document.getElementById('modalProductCategory');
+        const modalProductPrice = document.getElementById('modalProductPrice');
 
+        modalProductName.textContent = product.name;
+        modalProductImage.src = product.image;
+        modalProductCategory.textContent = `Categoría: ${product.category}`;
+        modalProductPrice.textContent = `Precio: $${product.price}`;
+
+        modal.style.display = 'block';
+
+        const closeModalButton = document.getElementById('closeModal');
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
 
 
 
