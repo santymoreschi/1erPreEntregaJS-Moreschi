@@ -1,11 +1,12 @@
+//MENU DESPLEGABLE
+document.querySelector('.menu-icon').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
 const carritoContainer = document.getElementById("carritoContainer")
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
 console.table(cartItems);
 const setCartItems = new Set(cartItems)
-
 console.table(setCartItems);
-
 if (cartItems.length > 0) {
     carritoContainer.innerHTML = ''
     cartItems.forEach(i =>{
@@ -17,5 +18,5 @@ if (cartItems.length > 0) {
 `
 })
 }else{
-    carritoContainer.innerHTML = `<h1>Vaya, parece que todavia no has agregado productos al carrito</h1>`
+    carritoContainer.innerHTML = `<h1>Vaya, parece que todavía no has agregado productos al carrito</h1>`
 }

@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>GAMES MARKET</title>
 </head>
 <body>
-<!--encabezado-->
-<header>
+    <!--encabezado-->
+    <header>
     <h1>GAMES MARKET</h1>
     <div class="logo">
-        <img src="img/games market.jpg" alt="logo de la companía" width="150" height="150">
+        <img
+        src="img/games market.jpg"
+        alt="logo de la companía"
+        width="150"
+        height="150"
+        />
     </div>
     <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Buscar productos...">
+        <input type="text" id="searchInput" placeholder="Buscar productos..." />
         <button onclick="filterProducts()">Buscar</button>
-    </div> 
-</header>
-
-<!--menu de navegacion-->
-<nav class="navbar">
+    </div>
+    </header>
+    <!--menu de navegacion-->
+    <nav class="navbar">
     <div class="menu-icon">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -30,115 +37,197 @@
     <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="./pages/productos.html">Productos</a></li>
-        <li><a href="./pages/carrito.html">Carrito</a></li>
         <li><a href="./pages/contacto.html">Contacto</a></li>
     </ul>
-</nav>
-
-
-<h2>Bienvenido a Games Market...<div class="subtitle-wrapper">Una página web con fines comerciales para que puedas
-        encontrar los productos que estás buscando al mejor precio del mercado.</div>
-</h2>
-
-<!--Slider de bootstrap -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicadores de navegación -->
+    </nav>
+    <h2>
+    Bienvenido a Games Market...
+    <div class="subtitle-wrapper">
+        Una página web con fines comerciales para que puedas encontrar los
+        productos que estás buscando al mejor precio del mercado.
+    </div>
+    </h2>
+    <!--Slider de bootstrap -->
+    <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    >
+<!-- Indicadores de navegación -->
     <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        <li
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        ></li>
+        <li
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        ></li>
+        <li
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        ></li>
     </ol>
-    <!-- Slides del slider -->
+<!-- Slides-->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-accessories-keyart-01-en-24mar22?$facebook$" class="d-block w-100" alt="imagen de playstation">
+        <img
+            src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-accessories-keyart-01-en-24mar22?$facebook$"
+            class="d-block w-100"
+            alt="imagen de playstation"
+        />
         </div>
         <div class="carousel-item">
-            <img src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-accessories-hero-banner-featured-desktop-01-en-12sep22?$1600px--t$" alt="imagen de xbox">
+        <img
+            src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-accessories-hero-banner-featured-desktop-01-en-12sep22?$1600px--t$"
+            alt="imagen de xbox"
+        />
         </div>
         <div class="carousel-item">
-            <img src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-accessories-keyart-01-en-24mar22?$facebook$">
+        <img
+            src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-accessories-keyart-01-en-24mar22?$facebook$"
+        />
         </div>
     </div>
-    <!-- Botones de navegación -->
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+<!-- Botones de navegación -->
+    <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="prev"
+    >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+    <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="next"
+    >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </a>
-</div>
-
-
-
-
-<div class="comercio">
+    </div>
+    <div class="comercio">
     <p>¡ACEDDE A NUESTRO CATÁLOGO LAS 24HS TODOS LOS DÍAS!</p>
-    <a href="pages/productos.html" target="_blank"><img src="./img/games market.jpg" width="180px" height="180px"></a>
-</div>
-
-
-<h3>CATÁLOGO DESTACADO DE NUESTROS PATROCINADORES:</h3>
-
-<section id="flex-content">
-    <a href="https://www.mercadolibre.com.ar/god-of-war-ragnarok-standard-edition-sony-ps4-fisico/p/MLA19472094?pdp_filters=category:MLA373840#searchVariation=MLA19472094&position=2&search_layout=stack&type=product&tracking_id=71cb1425-c2f7-4604-9c1b-6ee0086c76d3" target="_blank"><img src="https://http2.mlstatic.com/D_NQ_NP_890564-MLA54008978956_022023-O.webp" alt="juegos ps4 1" width="300px">
+    <a href="pages/productos.html" target="_blank"
+        ><img src="./img/games market.jpg" width="180px" height="180px"
+    /></a>
+    </div>
+    <h3>CATÁLOGO DESTACADO DE NUESTROS PATROCINADORES:</h3>
+    <section id="flex-content">
+    <a
+        href="https://www.mercadolibre.com.ar/god-of-war-ragnarok-standard-edition-sony-ps4-fisico/p/MLA19472094?pdp_filters=category:MLA373840#searchVariation=MLA19472094&position=2&search_layout=stack&type=product&tracking_id=71cb1425-c2f7-4604-9c1b-6ee0086c76d3"
+        target="_blank"
+        ><img
+        src="https://http2.mlstatic.com/D_NQ_NP_890564-MLA54008978956_022023-O.webp"
+        alt="juegos ps4 1"
+        width="300px"
+        />
     </a>
 
-    <a href="https://www.mercadolibre.com.ar/fifa-23-standard-edition-electronic-arts-ps4-fisico/p/MLA19540150?pdp_filters=category:MLA373840#searchVariation=MLA19540150&position=1&search_layout=stack&type=product&tracking_id=dedd63a4-3ec5-49dd-878d-0a694b89f252" target="_blank"><img src="https://http2.mlstatic.com/D_NQ_NP_816165-MLA53018854453_122022-O.webp" alt="juego ps4 2" width="300px">
+    <a
+        href="https://www.mercadolibre.com.ar/fifa-23-standard-edition-electronic-arts-ps4-fisico/p/MLA19540150?pdp_filters=category:MLA373840#searchVariation=MLA19540150&position=1&search_layout=stack&type=product&tracking_id=dedd63a4-3ec5-49dd-878d-0a694b89f252"
+        target="_blank"
+        ><img
+        src="https://http2.mlstatic.com/D_NQ_NP_816165-MLA53018854453_122022-O.webp"
+        alt="juego ps4 2"
+        width="300px"
+        />
     </a>
 
-    <a href="https://www.mercadolibre.com.ar/horizon-forbidden-west-standard-edition-sony-ps4-fisico/p/MLA18506505?pdp_filters=category:MLA373840#searchVariation=MLA18506505&position=3&search_layout=stack&type=product&tracking_id=0ea25e8d-9aa5-49b5-8301-88c9fcb1f79c" target="_blank"><img src="https://http2.mlstatic.com/D_NQ_NP_780183-MLU70003550904_062023-O.webp" alt="juego ps4 3" width="300px">
+    <a
+        href="https://www.mercadolibre.com.ar/horizon-forbidden-west-standard-edition-sony-ps4-fisico/p/MLA18506505?pdp_filters=category:MLA373840#searchVariation=MLA18506505&position=3&search_layout=stack&type=product&tracking_id=0ea25e8d-9aa5-49b5-8301-88c9fcb1f79c"
+        target="_blank"
+        ><img
+        src="https://http2.mlstatic.com/D_NQ_NP_780183-MLU70003550904_062023-O.webp"
+        alt="juego ps4 3"
+        width="300px"
+        />
     </a>
 
-    <a href="https://www.mercadolibre.com.ar/mortal-kombat-11-ultimate-ultimate-edition-fisico-ps4/p/MLA19148221?pdp_filters=category:MLA373840#searchVariation=MLA19148221&position=6&search_layout=stack&type=product&tracking_id=e32c2fd5-30d0-4d56-9226-20d0dd3127eb" target="_blank"><img src="https://http2.mlstatic.com/D_NQ_NP_966752-MLA54581344196_032023-O.webp" alt="juego ps4 4" width="300px">
+    <a
+        href="https://www.mercadolibre.com.ar/mortal-kombat-11-ultimate-ultimate-edition-fisico-ps4/p/MLA19148221?pdp_filters=category:MLA373840#searchVariation=MLA19148221&position=6&search_layout=stack&type=product&tracking_id=e32c2fd5-30d0-4d56-9226-20d0dd3127eb"
+        target="_blank"
+        ><img
+        src="https://http2.mlstatic.com/D_NQ_NP_966752-MLA54581344196_032023-O.webp"
+        alt="juego ps4 4"
+        width="300px"
+        />
+    </a>
+    <a
+        href="https://www.mercadolibre.com.ar/souls-demons-souls-remake-standard-edition-fisico-ps5/p/MLA16273091?pdp_filters=category:MLA1144#searchVariation=MLA16273091&position=2&search_layout=stack&type=product&tracking_id=c1dceb49-8738-477a-9394-d18a1fdc3814"
+        target="_blank"
+        ><img
+        src="https://http2.mlstatic.com/D_NQ_NP_972821-MLA45056517536_032021-O.webp"
+        alt="juego ps4 4"
+        width="300px"
+        />
     </a>
 
-    <a href="https://www.mercadolibre.com.ar/souls-demons-souls-remake-standard-edition-fisico-ps5/p/MLA16273091?pdp_filters=category:MLA1144#searchVariation=MLA16273091&position=2&search_layout=stack&type=product&tracking_id=c1dceb49-8738-477a-9394-d18a1fdc3814"
-        target="_blank"><img src="https://http2.mlstatic.com/D_NQ_NP_972821-MLA45056517536_032021-O.webp" alt="juego ps4 4"
-            width="300px">
+    <a
+        href="https://www.mercadolibre.com.ar/hogwarts-legacy-standard-edition-warner-bros-ps5-fisico/p/MLA20618095?pdp_filters=category:MLA1144#searchVariation=MLA20618095&position=5&search_layout=stack&type=product&tracking_id=9beafd04-edad-43f0-9f8e-898c09640b27"
+        target="_blank"
+        ><img
+        src="https://http2.mlstatic.com/D_NQ_NP_797134-MLA54009229472_022023-O.webp"
+        alt="juego ps4 4"
+        width="300px"
+        />
     </a>
-
-    <a href="https://www.mercadolibre.com.ar/hogwarts-legacy-standard-edition-warner-bros-ps5-fisico/p/MLA20618095?pdp_filters=category:MLA1144#searchVariation=MLA20618095&position=5&search_layout=stack&type=product&tracking_id=9beafd04-edad-43f0-9f8e-898c09640b27"
-        target="_blank"><img src="https://http2.mlstatic.com/D_NQ_NP_797134-MLA54009229472_022023-O.webp" alt="juego ps4 4"
-            width="300px">
-    </a>
-</section>
-
-
-<div class="visitanos">
-    <p>¡VISITÁ EL SHOWROOM DE NUESTRA FÁBRICA!
-        ROMA 1885, BUENOS AIRES
-        LUNES A VIERNES 8 A 18 HS - SÁBADO 9 A 18 HS - DOMINGOS Y FERIADOS 10 A 14 HS</p>
-    <a href="https://wa.me/5491234567890" target="_blank" class="whatsapp-link">
+    </section>
+    <div class="visitanos">
+    <p>
+        ¡VISITÁ EL SHOWROOM DE NUESTRA FÁBRICA! ROMA 1885, BUENOS AIRES LUNES A
+        VIERNES 8 A 18 HS - SÁBADO 9 A 18 HS - DOMINGOS Y FERIADOS 10 A 14 HS
+    </p>
+    <a
+        href="https://wa.me/5491234567890"
+        target="_blank"
+        class="whatsapp-link"
+    >
         <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
     </a>
-</div>
-
-
-
-
-<footer class="footer">
+    </div>
+    <footer class="footer">
     <div class="container">
         <div class="contact-info">
-            <h3>Contacto</h3>
-            <p>Dirección: Calle Falsa 123, Ciudad Ficticia</p>
-            <p>Teléfono: (555) 123-4567</p>
-            <p>Email: contacto@ejemplo.com</p>
+        <h3>Contacto</h3>
+        <p>Dirección: Calle Falsa 123, Ciudad Ficticia</p>
+        <p>Teléfono: (555) 123-4567</p>
+        <p>Email: contacto@ejemplo.com</p>
         </div>
-            <div class="social-media">
-                <h3>Redes Sociales</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/santiago.moreschi.94/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://www.instagram.com/santy_moreschi/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://www.instagram.com/santy_moreschi/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    </ul>
-            </div>
+        <div class="social-media">
+        <h3>Redes Sociales</h3>
+        <ul>
+            <li>
+            <a
+                href="https://www.facebook.com/santiago.moreschi.94/"
+                target="_blank"
+                ><i class="fab fa-facebook"></i> Facebook</a
+            >
+            </li>
+            <li>
+            <a
+                href="https://www.instagram.com/santy_moreschi/"
+                target="_blank"
+                ><i class="fab fa-twitter"></i> Twitter</a
+            >
+            </li>
+            <li>
+            <a
+                href="https://www.instagram.com/santy_moreschi/"
+                target="_blank"
+                ><i class="fab fa-instagram"></i> Instagram</a
+            >
+            </li>
+        </ul>
+        </div>
     </div>
-            <h6>© 2020 Games Market. Todos los derechos reservados.</h6>
-</footer>
-<script src="./js/inicio.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <h6>© 2020 Games Market. Todos los derechos reservados.</h6>
+    </footer>
+    <script src="./js/inicio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

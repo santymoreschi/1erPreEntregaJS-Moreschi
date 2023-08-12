@@ -3,15 +3,11 @@ document.querySelector('.menu-icon').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
-
-
-
 /*
 // Función para saludar al cliente y solicitar nombre, edad y localidad
 function saludar() {
 var nombre = prompt("Por favor, ingresa tu nombre:");
 var apellido = prompt("Por favor, ingresa tu apellido:");
-
 if (nombre === null || nombre === "") {
     alert("No ingresaste un nombre válido.");
 } else if (apellido === null || apellido === "") {
@@ -37,12 +33,8 @@ if (nombre === null || nombre === "") {
 }
 // Llamamos a la función para que muestre los mensajes y solicite los datos al cliente.
 saludar();
-
-
-
 //¿Eres mayor de edad?
 let edad = 20;
-
 if (edad >= 18) {
 console.log("Eres mayor de edad");
 } else {
