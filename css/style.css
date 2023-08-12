@@ -4,7 +4,6 @@ body {
     padding: 0;
     position: relative;
 }
-
 /* Animación de desvanecimiento */
 @keyframes fade-in {
     from {
@@ -21,14 +20,11 @@ body {
         transform: translateY(-50px);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
-
-
 header {
     background-color: #333;
     color: #fff;
@@ -36,7 +32,6 @@ header {
     display: flex;
     align-items: center;
 }
-
 .logo img {
     width: 150px;
     height: 150px;
@@ -44,8 +39,6 @@ header {
     border-radius: 50%;
     margin-right: 20px;
 }
-
-/* Estilos para los títulos */
 h1 {
     flex: 1;
     font-size: 36px;
@@ -55,7 +48,6 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
 h2{
     font-size: 24px;
     text-align: center;
@@ -63,7 +55,6 @@ h2{
     padding: 20px;
     color: #007bff;
 }
-
 h3 {
     font-size: 24px;
     text-align: center;
@@ -72,19 +63,16 @@ h3 {
     margin-top: 10px;
     color: #333;
 }
-
 h4,
 h5 {
     text-align: center;
     margin-top: 20px;
 }
-
 .sub-texto{
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
-
 /* Estilos generales para la barra de navegación */
 .navbar {
     background-color: #333;
@@ -93,34 +81,28 @@ h5 {
     align-items: center;
     padding: 10px;
 }
-
 .nav-links {
     display: flex;
     list-style: none;
     margin-left: auto;
 }
-
 .nav-links li {
     padding: 0 15px;
 }
-
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
-
 .nav-links a:hover {
     border-bottom: 2px solid #fff;
 }
-
 /* Estilos para el menú hamburguesa (responsive) */
 .menu-icon {
     display: none;
     cursor: pointer;
     padding: 10px;
 }
-
 .menu-icon .bar {
     width: 25px;
     height: 3px;
@@ -128,7 +110,6 @@ h5 {
     margin: 5px 0;
     transition: 0.4s;
 }
-
 /* Estilos para el div "subtitle-wrapper" */
 .subtitle-wrapper {
     color: black;
@@ -144,7 +125,6 @@ h5 {
 .subtitle-wrapper p {
     margin: 15px 0;
 }
-
 /* Estilos para index "visitanos" */
 .visitanos {
     color: white;
@@ -157,7 +137,6 @@ h5 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 /* Estilos para el enlace de WhatsApp */
 .whatsapp-link {
     display: block;
@@ -175,8 +154,6 @@ h5 {
 .whatsapp-link i {
     margin-right: 8px;
 }
-
-
 /* modificación del  slider*/
 #carouselExampleIndicators {
     margin: 30px auto;
@@ -210,8 +187,6 @@ h5 {
     height: 14px;
     border-radius: 50%;
 }
-
-/* Estilos para la sección */
 #flex-content {
     display: flex;
     justify-content: center;
@@ -224,7 +199,6 @@ h5 {
     transition: transform 0.5s ease;
     transform: scale(1.15);
 }
-
 /* Estilos para los enlaces de productos */
 .product-link {
     margin: 10px;
@@ -258,11 +232,9 @@ h5 {
     height: auto;
     transition: transform 0.3s ease;
 }
-/* Animación de zoom al pasar el mouse */
 .product-image:hover {
     transform: scale(1.1);
 }
-/* Otros estilos para la sección */
 #flex-content {
     display: flex;
     justify-content: center;
@@ -273,8 +245,6 @@ h5 {
     text-decoration: none;
     color: #333;
 }
-
-/*estilo del boton comercio*/
 .comercio {
     text-align: center;
     padding: 20px;
@@ -284,13 +254,11 @@ h5 {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     margin: 20px;
 }
-
 .comercio p {
     font-size: 18px;
     margin: 10px 0;
     color: white;
 }
-
 .comercio a {
     display: inline-block;
     padding: 10px 20px;
@@ -300,11 +268,9 @@ h5 {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
-
 .comercio a:hover {
     background-color: #1e73be;
 }
-
 .comercio img {
     display: block;
     margin: 0 auto;
@@ -312,8 +278,6 @@ h5 {
     border: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-
-
 /*productos.js*/
 .center-container {
     display: flex;
@@ -374,53 +338,11 @@ button:hover {
     color: white;
     transition: background-color 0.5s;
 }
-
 /* Agrega estilos para los botones deshabilitados */
 .disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
-
-/* Estilos del modal */
-/* .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    /* Asegura que el modal esté en la parte superior */
-/* } */
-
-/* .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-} */
-
-/* Estilos para el botón "Cerrar" dentro del modal */
-/* #closeModal {
-    margin-top: 10px;
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-} */
-
-/* #closeModal:hover {
-    background-color: #ff4022;
-} */
-
-
 /*footer*/
 .footer {
     background-color: #333;
@@ -461,8 +383,6 @@ button:hover {
 .footer ul li a i {
     margin-right: 10px;
 }
-
-
 /* Estilos del formulario (contacto) */
 form {
     max-width: 400px;
@@ -515,20 +435,15 @@ input[type="submit"]:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-
-
 @media screen and (max-width: 600px) {
     
     header {
         flex-direction: column;
     }
-    
     .logo img {
     margin-right: 0;
     margin-bottom: 10px;
     }
-    
     #searchInput {
     width: 100%;
     margin-right: 0;
@@ -545,16 +460,13 @@ input[type="submit"]:hover {
     background-color: #333;
     z-index: 1;
     }
-    
     .nav-links li {
         padding: 15px;
         text-align: center;
     }
-    
     .nav-links a {
         color: #fff;
     }
-    
     .menu-icon {
         display: block;
     }
@@ -572,7 +484,6 @@ input[type="submit"]:hover {
     .nav-links.active {
     display: flex;
     }
-
     .product-card {
     width: 100%;
     }
