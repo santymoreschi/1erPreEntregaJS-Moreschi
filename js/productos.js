@@ -24,7 +24,6 @@ function addToCart(event) {
     const productId = parseInt(event.target.getAttribute('data-product-id'));
     const productToAdd = products.find((product) => product.id === productId);
     if (productToAdd) {
-    
         console.log(`Producto "${productToAdd.name}" añadido al carrito.`);
         const productFound = cartItems.find(i => i.id == productToAdd.id)
         if (productFound) {
@@ -54,12 +53,11 @@ const products = [
     { id: 5, name: 'Auriculares', category: 'Electrónicos', price: 250, image: '../img/auriculares.jpg',quantity: 1},
     { id: 6, name: 'Smart tv samsung', category: 'Electrónicos', price: 750, image: '../img/smartsamsung.jpg',quantity: 1 },
     { id: 7, name: 'Cascos VR ps5', category: 'Electrónicos', price: 1250, image: '../img/vr.jpg',quantity: 1 },
-    { id: 8, name: 'Smartwaches', category: 'Electrónicos', price: 750, image: 'https://http2.mlstatic.com/D_NQ_NP_771823-MLA45810691826_052021-O.webp',quantity: 0 },
-    { id: 9, name: 'Tablet Samsung Tab A7', category: 'Electrónicos', price: 538, image: 'https://http2.mlstatic.com/D_NQ_NP_639004-MLU69482268920_052023-O.webp',quantity: 0 },
-    { id: 10, name: 'Mando ps4', category: 'Electrónicos', price: 290, image: 'https://http2.mlstatic.com/D_NQ_NP_686753-MLU69972650035_062023-O.webp',quantity: 0 },
+    { id: 8, name: 'Smartwaches', category: 'Electrónicos', price: 750, image: 'https://http2.mlstatic.com/D_NQ_NP_771823-MLA45810691826_052021-O.webp',quantity: 1 },
+    { id: 9, name: 'Tablet Samsung Tab A7', category: 'Electrónicos', price: 538, image: 'https://http2.mlstatic.com/D_NQ_NP_639004-MLU69482268920_052023-O.webp',quantity: 1 },
+    { id: 10, name: 'Mando ps4', category: 'Electrónicos', price: 290, image: 'https://http2.mlstatic.com/D_NQ_NP_686753-MLU69972650035_062023-O.webp',quantity: 1 },
 ];
 let filteredProducts = products.slice();
-// Función para HTML
 function showProducts() {
     const productListDiv = document.getElementById('productList');
     productListDiv.innerHTML = '';
@@ -108,7 +106,6 @@ function openModal(product) {
         modal.style.display = 'none';
     S});
     }
-
 //Buscador de Productos por nombre
 function filterProducts() {
     const searchInput = document.getElementById('searchInput');

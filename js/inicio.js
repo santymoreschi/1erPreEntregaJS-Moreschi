@@ -3,6 +3,8 @@ document.querySelector('.menu-icon').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
+
+
 /*
 // Función para saludar al cliente y solicitar nombre, edad y localidad
 function saludar() {
