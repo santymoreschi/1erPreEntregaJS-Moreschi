@@ -21,7 +21,10 @@ if (cartItems.length > 0) {
 }else{
     carritoContainer.innerHTML = `<h1>Vaya, parece que todavía no has agregado productos al carrito</h1>`
 }
-/*
+
+
+
+/* REVISION
 let Eliminar = carritoContainer.querySelector(".delete-product")
 Eliminar.addEventListener("click", () => {
     eliminarProdcuto(producto.id);
@@ -34,17 +37,41 @@ const eliminarProdcuto = (id) => {
     carrito = carrito.filter((carritoid) => {
         return carritoid !== foundId;
     });
-}*/
-/*
+}
 <button type="button" className={Styles.eliminar} onClick={() => eliminarProdcuto(producto.id)}>Eliminar Producto</button>
-
 const eliminarProdcuto = (id) => {
     console.table(id);
 }
-
 return (
     <component {
-        eliminarProdcuto={eliminarProdcuto}
+        eliminarProducto = {eliminarProducto}
     }
-    />
-)*/
+    ></component>
+)
+const deleteButtons = document.querySelectorAll(".delete-product");
+deleteButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+        const productId = event.target.getAttribute("data-id");
+        eliminarProducto(productId);
+    });
+});
+const eliminarProducto = (id) => {
+    cartItems = cartItems.filter(item => item.id !== id);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    actualizarCarrito();
+};
+const actualizarCarrito = () => {
+    if (cartItems.length > 0) {
+        carritoContainer.innerHTML = '';
+        cartItems.forEach(i => {
+            carritoContainer.innerHTML += `
+                <!-- ... tu código para mostrar el producto ... -->
+                <button class="delete-product" data-id="${i.id}">Eliminar Producto</button>
+            `;
+        });
+    } else {
+        carritoContainer.innerHTML = `<h1>Vaya, parece que todavía no has agregado productos al carrito</h1>`;
+    }
+};
+actualizarCarrito();
+*/
