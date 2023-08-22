@@ -40,12 +40,67 @@
         <li><a href="contacto.html">Contacto</a></li>
     </ul>
     </nav>
-    <section class="container-fluid d-flex justify-content-center align-content-center">
-        <div id="carritoContainer" class="container row g-2">
-
-        </div>
+    <section
+    class="container-fluid d-flex justify-content-center align-content-center"
+    >
+    <div id="carritoContainer" class="container row g-2"></div>
     </section>
-    <h2>Proximamente estaremos procesando tu pedido para que lo retires en nuestro local</h2>
+
+    <!-- Button trigger modal -->
+    <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"
+    >
+    Comprar
+    </button>
+    <!-- Modal -->
+    <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            ¿Quieres finalizar la Compra?
+            </h1>
+            <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            ></button>
+        </div>
+        <div class="modal-body">
+            <img
+            src="https://images.emojiterra.com/google/android-11/512px/1f914.png"
+            alt="logo"
+            width="100%"
+            height="100%"
+            />
+        </div>
+        <div class="modal-footer">
+            <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            >
+            Seguir Comprando
+            </button>
+            <a type="button" class="btn btn-primary" href="compra.html"
+            >Finalizar Compra</a
+            >
+        </div>
+        </div>
+    </div>
+    </div>
     <footer class="footer">
     <div class="container">
         <div class="contact-info">
