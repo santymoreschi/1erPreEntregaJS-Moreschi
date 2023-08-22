@@ -20,11 +20,12 @@ function loadCartFromLocalStorage() {
 }
 //Productos en el carrito
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
 function addToCart(event) {
     const productId = parseInt(event.target.getAttribute('data-product-id'));
     const productToAdd = products.find((product) => product.id === productId);
+    
     if (productToAdd) {
-        console.log(`Producto "${productToAdd.name}" añadido al carrito.`);
         const productFound = cartItems.find(i => i.id == productToAdd.id)
         if (productFound) {
             const productFoundIndex = cartItems.findIndex(i => i.id == productToAdd.id)
@@ -44,6 +45,7 @@ function addToCart(event) {
     loadCartFromLocalStorage();
     showProducts();
 }
+
 //Productos disponibles en la tienda del index
 const products = [
     { id: 1, name: 'Smartphone', category: 'Electrónicos', price: 300, image: '../img/smartphone.jpg', quantity: 1 },
@@ -58,6 +60,7 @@ const products = [
     { id: 10, name: 'Mando ps4', category: 'Electrónicos', price: 290, image: 'https://http2.mlstatic.com/D_NQ_NP_686753-MLU69972650035_062023-O.webp',quantity: 1 },
 ];
 let filteredProducts = products.slice();
+
 function showProducts() {
     const productListDiv = document.getElementById('productList');
     productListDiv.innerHTML = '';
@@ -79,9 +82,11 @@ function showProducts() {
     });
     //"Añadir al carrito"
     const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+
     addToCartButtons.forEach((button) => {
         button.addEventListener('click', addToCart);
     });
+    
     const openModalButtons = document.querySelectorAll('.open-modal-button');
     openModalButtons.forEach((button) => {
         button.addEventListener('click', () => {
