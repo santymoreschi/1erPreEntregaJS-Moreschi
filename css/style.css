@@ -435,6 +435,27 @@ input[type="submit"]:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+/*compraFinal*/
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.image-contenedor {
+    text-align: center;
+    margin-top: 20px;
+}
+.message {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.fw-bold {
+    font-weight: bold;
+}
 
 @media screen and (max-width: 600px) {
     
