@@ -456,7 +456,16 @@ input[type="submit"]:hover {
 .fw-bold {
     font-weight: bold;
 }
-
+.button-compra {
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-primary {
+    background-color: #FF5733;
+    border-color: #FF5733;
+    color: white;
+    font-weight: bold;
+}
 @media screen and (max-width: 600px) {
     
     header {
